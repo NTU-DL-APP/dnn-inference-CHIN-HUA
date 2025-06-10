@@ -1,9 +1,9 @@
 [
   {
-    "name": "flatten_3",
+    "name": "flatten_4",
     "type": "Flatten",
     "config": {
-      "name": "flatten_3",
+      "name": "flatten_4",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -18,10 +18,10 @@
     "weights": []
   },
   {
-    "name": "dense_9",
+    "name": "dense_12",
     "type": "Dense",
     "config": {
-      "name": "dense_9",
+      "name": "dense_12",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -54,15 +54,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_9_0",
-      "dense_9_1"
+      "dense_12_0",
+      "dense_12_1"
     ]
   },
   {
-    "name": "dense_10",
+    "name": "dense_13",
     "type": "Dense",
     "config": {
-      "name": "dense_10",
+      "name": "dense_13",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -95,15 +95,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_10_0",
-      "dense_10_1"
+      "dense_13_0",
+      "dense_13_1"
     ]
   },
   {
-    "name": "dense_11",
+    "name": "dense_14",
     "type": "Dense",
     "config": {
-      "name": "dense_11",
+      "name": "dense_14",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -136,8 +136,8 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_11_0",
-      "dense_11_1"
+      "dense_14_0",
+      "dense_14_1"
     ]
   }
 ]

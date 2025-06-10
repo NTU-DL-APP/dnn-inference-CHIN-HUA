@@ -1,9 +1,9 @@
 [
   {
-    "name": "flatten_5",
+    "name": "flatten_6",
     "type": "Flatten",
     "config": {
-      "name": "flatten_5",
+      "name": "flatten_6",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -18,10 +18,10 @@
     "weights": []
   },
   {
-    "name": "dense_15",
+    "name": "dense_18",
     "type": "Dense",
     "config": {
-      "name": "dense_15",
+      "name": "dense_18",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -54,15 +54,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_15_0",
-      "dense_15_1"
+      "dense_18_0",
+      "dense_18_1"
     ]
   },
   {
-    "name": "dense_16",
+    "name": "dense_19",
     "type": "Dense",
     "config": {
-      "name": "dense_16",
+      "name": "dense_19",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -95,15 +95,15 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_16_0",
-      "dense_16_1"
+      "dense_19_0",
+      "dense_19_1"
     ]
   },
   {
-    "name": "dense_17",
+    "name": "dense_20",
     "type": "Dense",
     "config": {
-      "name": "dense_17",
+      "name": "dense_20",
       "trainable": true,
       "dtype": {
         "module": "keras",
@@ -136,8 +136,8 @@
       "bias_constraint": null
     },
     "weights": [
-      "dense_17_0",
-      "dense_17_1"
+      "dense_20_0",
+      "dense_20_1"
     ]
   }
 ]

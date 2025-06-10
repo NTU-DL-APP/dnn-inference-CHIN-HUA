@@ -5,10 +5,16 @@ def relu(x):
     return np.maximum(0, x)
 
 def softmax(x):
-    x = np.atleast_2d(x)
-    e = np.exp(x - np.max(x, axis=-1, keepdims=True))
-    s = e / np.sum(e, axis=-1, keepdims=True)
-    return s if x.shape[0] > 1 else s[0]
+    # 改為支援一維或二維，並保持 axis=-1 的計算穩定性
+    x = np.asarray(x)
+    if x.ndim == 1:
+        x = x - np.max(x)
+        e = np.exp(x)
+        return e / np.sum(e)
+    else:
+        x = x - np.max(x, axis=1, keepdims=True)
+        e = np.exp(x)
+        return e / np.sum(e, axis=1, keepdims=True)
 
 # === Flatten ===
 def flatten(x):
@@ -16,7 +22,7 @@ def flatten(x):
 
 # === Dense layer ===
 def dense(x, W, b):
-    return x @ W + b
+    return np.dot(x, W) + b  # 或 x @ W + b
 
 # === Forward pass ===
 def nn_forward_h5(model_arch, weights, data):
@@ -32,11 +38,11 @@ def nn_forward_h5(model_arch, weights, data):
             W = weights[wnames[0]]
             b = weights[wnames[1]]
             x = dense(x, W, b)
-            if cfg.get("activation") == "relu":
+            act = cfg.get("activation")
+            if act == "relu":
                 x = relu(x)
-            elif cfg.get("activation") == "softmax":
+            elif act == "softmax":
                 x = softmax(x)
-
     return x
 
 # === Inference API ===
